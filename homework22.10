@@ -1,0 +1,14 @@
+class Digital:
+    def __init__(self,analogi) :
+        self.analogi=analogi
+    def ToDigital(self):
+        orginalnum=1023/5*self.analogi
+        orginalnum=int(orginalnum)
+        digitalnum=decimalToBinary(orginalnum)
+        return digitalnum
+    def SetDigitalValue(self,value):
+        self.analogi=value
+def decimalToBinary(n): 
+        return bin(n).replace("0b", "")
+dig1=Digital(4)
+print(dig1.ToDigital())   
